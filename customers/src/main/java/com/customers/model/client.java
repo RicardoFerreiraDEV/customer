@@ -1,7 +1,5 @@
 package com.customers.model;
 
-import java.time.LocalDateTime;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +14,18 @@ public class client {
 	@GeneratedValue(strategy = GenerationType.IDENTITY	)
 	private Long codigo;
 	private String name;
-	private Long identificationdocument;
-	private LocalDateTime birthdate;
+	private String identificationdocument;
+	private String birthdate;
 	private String gender;
+	private String alias;
+	private String street;
+	private Long number;
+	private String complement;
+	private String neighborhood;
+	private String city;
+	private String state;
+	private String type;
+	private Long numberphone;
 
 	public Long getCodigo() {
 		return codigo;
@@ -36,19 +43,19 @@ public class client {
 		this.name = name;
 	}
 
-	public Long getIdentificationdocument() {
+	public String getIdentificationdocument() {
 		return identificationdocument;
 	}
 
-	public void setIdentificationdocument(Long identificationdocument) {
+	public void setIdentificationdocument(String identificationdocument) {
 		this.identificationdocument = identificationdocument;
 	}
 
-	public LocalDateTime getBirthdate() {
+	public String getBirthdate() {
 		return birthdate;
 	}
 
-	public void setBirthdate(LocalDateTime birthdate) {
+	public void setBirthdate(String birthdate) {
 		this.birthdate = birthdate;
 	}
 
@@ -58,6 +65,78 @@ public class client {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public String getAlias() {
+		return alias;
+	}
+
+	public void setAlias(String alias) {
+		this.alias = alias;
+	}
+
+	public String getStreet() {
+		return street;
+	}
+
+	public void setStreet(String street) {
+		this.street = street;
+	}
+
+	public Long getNumber() {
+		return number;
+	}
+
+	public void setNumber(Long number) {
+		this.number = number;
+	}
+
+	public String getComplement() {
+		return complement;
+	}
+
+	public void setComplement(String complement) {
+		this.complement = complement;
+	}
+
+	public String getNeighborhood() {
+		return neighborhood;
+	}
+
+	public void setNeighborhood(String neighborhood) {
+		this.neighborhood = neighborhood;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String city) {
+		this.city = city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	public Long getNumberphone() {
+		return numberphone;
+	}
+
+	public void setNumberphone(Long numberphone) {
+		this.numberphone = numberphone;
 	}
 
 	@Override
@@ -84,5 +163,4 @@ public class client {
 			return false;
 		return true;
 	}
-	
 }
